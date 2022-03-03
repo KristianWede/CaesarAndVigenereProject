@@ -196,7 +196,6 @@ public class Main {
             //Laver char om til et tal.
             int bogstavTal = obj.bogstaverTilTal(bogstav);
 
-
             //Tilføjer shift til det oversatte tal fra char.
             int shiftedBogstavTal = obj.applyShift(bogstavTal, kodeOrdBogstavTal);
 
