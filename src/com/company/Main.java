@@ -8,16 +8,18 @@ public class Main {
     char[] alfabet = {' ', 'A', 'B', 'C', 'D','E','F','G','H','I','J','K','L','M','N',
             'O','P','Q','R','S','T','U','V','W','X','Y','Z','Æ','Ø','Å'};
 
-
     //Spørger brugeren om de skal enten bruge Caesar el. Vigenere.
     public String caesarOrVigenere(){
         do{
             System.out.println("Skal du bruge Caesar eller Vigenere?");
-            String dilemma = sc.next();
+            System.out.println();
+            System.out.println("\t Caesar   : 1");
+            System.out.println("\t Vigenere : 2");
+            int dilemma = sc.nextInt();
             switch(dilemma) {
-                case "Caesar":
+                case 1:
                     return "Caesar";
-                case "Vigenere":
+                case 2:
                     return "Vigenere";
                 default:
                     System.out.println("Det passer ikke noget! Prøv igen!");
@@ -29,12 +31,15 @@ public class Main {
     public boolean vigenereEncryptOrDecrypt(){
         do{
             System.out.println("Skal du Encrypt eller Decrypt?");
-            String dilemma = sc.next();
+            System.out.println();
+            System.out.println("\t Encrypt : 1");
+            System.out.println("\t Decrypt : 2");
+            int dilemma = sc.nextInt();
             switch(dilemma) {
-                case "Encrypt":
-                    return false;
-                case "Decrypt":
-                    return true;
+                case 1:
+                    return false; //Hvis den skal Encrypt
+                case 2:
+                    return true; //Hvis den skal decrypt
                 default:
                     System.out.println("Det passer ikke noget! Prøv igen!");
             }
@@ -46,12 +51,15 @@ public class Main {
     public int encryptOrDecrypt(int shift){
         do{
             System.out.println("Skal du Encrypt eller Decrypt?");
-            String dilemma = sc.next();
+            System.out.println();
+            System.out.println("\t Encrypt : 1");
+            System.out.println("\t Decrypt : 2");
+            int dilemma = sc.nextInt();
             switch(dilemma) {
-                case "Encrypt":
-                    return shift;
-                case "Decrypt":
-                    return redefineShift(shift);
+                case 1:
+                    return shift; //Hvis den skal Encrypt
+                case 2:
+                    return redefineShift(shift); //Hvis den skal Decrypt
                 default:
                     System.out.println("Det passer ikke noget! Prøv igen!");
             }
@@ -113,7 +121,6 @@ public class Main {
     public void printOutMessage(char shiftedMessage){
         System.out.print(shiftedMessage);
     }
-
 
     public static void main(String[] args) {
 
